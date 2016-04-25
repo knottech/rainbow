@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .rainbow {
+      background-color: #f0f6f3;
+      display: inline-block;
+      padding: 5px;
+      margin: 5px;
+    }
+  </style>
+  <link rel="stylesheet" href="../src/jquery-ui.min.css">
+  <script src="../src/jquery.min.js"></script>
+  <script src="../src/jquery-ui.min.js"></script>
+  <script src="../src/rainbow.js"></script>
+  <script>
+    $().ready(function() {
+      function dive(div, n, i) {
+        var node = document.createElement("div");
+        node.setAttribute("class", "rainbow lv" + n.toString() + " sn" + i)
+        var res = div.appendChild(node);
+        if (n > 0) {
+          dive(res, n - 1, i)
+        }
+      }
+      for (var i = 0; i < 10; i++) {
+        dive($("#wrapper")[0], 10, i + 1);
+      }
+      $("#wrapper").rainbow()
+    })
+  </script>
+</head>
+
+<body>
+  <div id="wrapper"></div>
+</body>
+
+</html>

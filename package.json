@@ -1,0 +1,26 @@
+{
+    "name": "rainbow",
+    "version": "1.0.0",
+    "description": "Change BOM color by formula",
+    "main": "src/rainbow.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/knottech/rainbow.git"
+    },
+    "author": "IAN",
+    "license": "ISC",
+    "devDependencies": {
+        "grunt": "~0.4.0",
+        "grunt-contrib-uglify": "*"
+    },
+    "dependencies": {
+        "jquery": ">=1.9.1"
+    },
+    "bugs": {
+        "url": "https://github.com/knottech/rainbow/issues"
+    },
+    "homepage": "https://github.com/knottech/rainbow#readme"
+}
